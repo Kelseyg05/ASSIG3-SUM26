@@ -28,7 +28,7 @@ Comments and the shared note could run JavaScript.
 Payload:
 <img src=x onerror="alert('xss')">
 Fix:
-I encoded comments with escapeHtml() and replaced innerHTML with textContent. This allows The to treat the input as plain text. This is only a temporary fix.
+I encoded comments with escapeHtml() and replaced innerHTML with textContent. This allows the browser to treat the input as plain text. This is only a temporary fix because the same problem would happen if someone uses innerHTML again with user input.
 
 FIX 5 – Cookie Flags and CSP
 Problem:
